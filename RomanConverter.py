@@ -94,6 +94,8 @@ def main(argv):
         for i in range(1,len(argv)):
             try:
                 num = int(argv[i])
+                if num > 3999 or num < 1:
+                    raise ValueError("Int needs to be 0 < n < 4000")
                 print(num, " : ", convertToRoman(num))
             except ValueError:
                 print("Argument was not a valid int.")
@@ -101,11 +103,11 @@ def main(argv):
         for i in range(1,len(argv)):
             try:
                 print(argv[i], " : ", dictRoman[argv[i]])
-            except ValueError:
-                print("The number was not found in the mapping. Remember only Natural Numbers until 3300.")
+            except KeyError:
+                print("Conversion Failed: Make sure your string '" + argv[i] + "' is a Roman Numeral.")
     else:
         print("use rn - to convert roman to numeral | use nr - to convert numeral to roman")
-        print("The limit of conversion is 3300.")
+        print("The limit of conversion is 3999.")
         
 if __name__ == "__main__":
     main(sys.argv[1:])
