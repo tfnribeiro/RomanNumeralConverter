@@ -3,9 +3,23 @@
 
 # Usage
  1. Roman to Numeral: rn to convert from Roman Numeral to Numeral, you may pass more than 1 number.
- Ex: rn X XX XXX CXII 
+ ```
+    Ex:
+    python RomanConverter.py rn X XX XXX CXII
+    X  :  10
+    XX  :  20
+    XXX  :  30
+    CXII  :  112
+ ```
+ 
  2. Numeral to Roman: nr to convert from Numeral to Roman Numeral, you may again pass more than 1 number.
- Ex. nr 123 222 303
+ ```
+    Ex:
+    python RomanConverter.py nr 123 222 303
+    123  :  CXXIII
+    222  :  CCXXII
+    303  :  CCCIII
+ ```
 
 # Note
  You can only convert from 1 - 3999.
